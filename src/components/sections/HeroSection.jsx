@@ -84,13 +84,13 @@ export const HeroSection = ({ email, setEmail, onSubmit, isSubmitted }) => {
 
             {/* Right side - Glass cards */}
             <div style={{ position: 'relative', height: '620px' }}>
-                {/* Main glass card */}
+                {/* Main glass card - Salmon */}
                 <div style={{
                     position: 'absolute',
-                    top: '5%',
-                    right: '5%',
-                    width: '300px',
-                    padding: '28px',
+                    top: '0%',
+                    right: '0%',
+                    width: '280px',
+                    padding: '24px',
                     background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%)',
                     backdropFilter: 'blur(40px)',
                     WebkitBackdropFilter: 'blur(40px)',
@@ -98,57 +98,99 @@ export const HeroSection = ({ email, setEmail, onSubmit, isSubmitted }) => {
                     border: '1px solid rgba(255, 255, 255, 0.1)',
                     boxShadow: '0 40px 80px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1)',
                     transform: `translate(${mousePos.x * 0.008}px, ${mousePos.y * 0.008}px)`,
-                    transition: 'transform 0.4s ease-out'
+                    transition: 'transform 0.4s ease-out',
+                    zIndex: 2
                 }}>
                     <div style={{
                         width: '100%',
-                        height: '180px',
-                        background: `linear-gradient(145deg, ${colors.pink}30 0%, ${colors.pinkMuted}20 100%)`,
+                        height: '160px',
                         borderRadius: '16px',
-                        marginBottom: '24px',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        border: '1px solid rgba(255, 255, 255, 0.05)',
-                        position: 'relative',
+                        marginBottom: '20px',
                         overflow: 'hidden'
                     }}>
-                        <div style={{
-                            position: 'absolute',
-                            top: '-50%',
-                            left: '-50%',
-                            width: '200%',
-                            height: '200%',
-                            background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%)',
-                            transform: 'rotate(-45deg)'
-                        }} />
-                        <div style={{
-                            width: '64px',
-                            height: '64px',
-                            borderRadius: '50%',
-                            background: `linear-gradient(135deg, ${colors.pink} 0%, ${colors.pinkDark} 100%)`,
-                            boxShadow: `0 8px 32px ${colors.pink}50`
-                        }} />
+                        <img 
+                            src={import.meta.env.BASE_URL + 'salmon.png'} 
+                            alt="Miso Glazed Salmon"
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover'
+                            }}
+                        />
                     </div>
-                    <p style={{ fontSize: '10px', color: colors.silverMuted, marginBottom: '8px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Today</p>
-                    <p style={{ fontSize: '18px', fontWeight: '500', color: colors.white, marginBottom: '16px', letterSpacing: '-0.01em' }}>
+                    <p style={{ fontSize: '10px', color: colors.silverMuted, marginBottom: '6px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Today</p>
+                    <p style={{ fontSize: '17px', fontWeight: '500', color: colors.white, marginBottom: '14px', letterSpacing: '-0.01em' }}>
                         Miso Glazed Salmon
                     </p>
-                    <div style={{ display: 'flex', gap: '20px' }}>
+                    <div style={{ display: 'flex', gap: '18px' }}>
                         <div>
-                            <p style={{ fontSize: '22px', fontWeight: '500', color: colors.olive }}>$8.40</p>
-                            <p style={{ fontSize: '10px', color: colors.silverMuted, letterSpacing: '0.05em' }}>per serving</p>
+                            <p style={{ fontSize: '20px', fontWeight: '500', color: colors.olive }}>$8.40</p>
+                            <p style={{ fontSize: '9px', color: colors.silverMuted, letterSpacing: '0.05em' }}>per serving</p>
                         </div>
                         <div style={{ width: '1px', background: `linear-gradient(180deg, transparent, ${colors.silverDark}, transparent)` }} />
                         <div>
                             <p style={{
-                                fontSize: '22px',
+                                fontSize: '20px',
                                 fontWeight: '500',
                                 background: `linear-gradient(135deg, ${colors.silverLight} 0%, ${colors.silver} 100%)`,
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent'
                             }}>540</p>
-                            <p style={{ fontSize: '10px', color: colors.silverMuted, letterSpacing: '0.05em' }}>calories</p>
+                            <p style={{ fontSize: '9px', color: colors.silverMuted, letterSpacing: '0.05em' }}>calories</p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Second recipe card - Truffle Pasta */}
+                <div style={{
+                    position: 'absolute',
+                    top: '38%',
+                    left: '5%',
+                    width: '260px',
+                    padding: '22px',
+                    background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%)',
+                    backdropFilter: 'blur(40px)',
+                    WebkitBackdropFilter: 'blur(40px)',
+                    borderRadius: '22px',
+                    border: '1px solid rgba(255, 255, 255, 0.08)',
+                    boxShadow: '0 30px 60px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08)',
+                    transform: `translate(${mousePos.x * -0.01}px, ${mousePos.y * -0.01}px)`,
+                    transition: 'transform 0.4s ease-out',
+                    zIndex: 1
+                }}>
+                    <div style={{
+                        width: '100%',
+                        height: '140px',
+                        borderRadius: '14px',
+                        marginBottom: '18px',
+                        overflow: 'hidden',
+                        background: `linear-gradient(145deg, ${colors.pink}20 0%, ${colors.pinkMuted}10 100%)`,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        border: '1px solid rgba(255, 255, 255, 0.05)'
+                    }}>
+                        <span style={{ fontSize: '48px' }}>🍝</span>
+                    </div>
+                    <p style={{ fontSize: '9px', color: colors.silverMuted, marginBottom: '6px', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Tomorrow</p>
+                    <p style={{ fontSize: '16px', fontWeight: '500', color: colors.white, marginBottom: '12px', letterSpacing: '-0.01em' }}>
+                        Truffle Mushroom Pasta
+                    </p>
+                    <div style={{ display: 'flex', gap: '16px' }}>
+                        <div>
+                            <p style={{ fontSize: '18px', fontWeight: '500', color: colors.olive }}>$6.20</p>
+                            <p style={{ fontSize: '9px', color: colors.silverMuted, letterSpacing: '0.05em' }}>per serving</p>
+                        </div>
+                        <div style={{ width: '1px', background: `linear-gradient(180deg, transparent, ${colors.silverDark}, transparent)` }} />
+                        <div>
+                            <p style={{
+                                fontSize: '18px',
+                                fontWeight: '500',
+                                background: `linear-gradient(135deg, ${colors.silverLight} 0%, ${colors.silver} 100%)`,
+                                WebkitBackgroundClip: 'text',
+                                WebkitTextFillColor: 'transparent'
+                            }}>680</p>
+                            <p style={{ fontSize: '9px', color: colors.silverMuted, letterSpacing: '0.05em' }}>calories</p>
                         </div>
                     </div>
                 </div>
@@ -156,20 +198,21 @@ export const HeroSection = ({ email, setEmail, onSubmit, isSubmitted }) => {
                 {/* Metallic stat card */}
                 <div style={{
                     position: 'absolute',
-                    top: '58%',
+                    top: '22%',
                     left: '0%',
-                    padding: '28px 36px',
-                    background: `linear-gradient(145deg, rgba(192, 192, 192, 0.15) 0%, rgba(192, 192, 192, 0.05) 100%)`,
+                    padding: '24px 32px',
+                    background: `linear-gradient(145deg, rgba(192, 192, 192, 0.12) 0%, rgba(192, 192, 192, 0.04) 100%)`,
                     backdropFilter: 'blur(30px)',
                     WebkitBackdropFilter: 'blur(30px)',
-                    borderRadius: '20px',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                    boxShadow: '0 20px 60px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.15)',
+                    borderRadius: '18px',
+                    border: '1px solid rgba(255, 255, 255, 0.08)',
+                    boxShadow: '0 20px 60px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1)',
                     transform: `translate(${mousePos.x * -0.012}px, ${mousePos.y * -0.012}px)`,
-                    transition: 'transform 0.4s ease-out'
+                    transition: 'transform 0.4s ease-out',
+                    zIndex: 0
                 }}>
                     <p style={{
-                        fontSize: '48px',
+                        fontSize: '42px',
                         fontWeight: '400',
                         letterSpacing: '-0.03em',
                         marginBottom: '4px',
@@ -178,48 +221,14 @@ export const HeroSection = ({ email, setEmail, onSubmit, isSubmitted }) => {
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text'
                     }}>40%</p>
-                    <p style={{ fontSize: '11px', color: colors.silverMuted, letterSpacing: '0.1em', textTransform: 'uppercase' }}>average savings</p>
+                    <p style={{ fontSize: '10px', color: colors.silverMuted, letterSpacing: '0.1em', textTransform: 'uppercase' }}>average savings</p>
                 </div>
-
-                {/* Pink glass orb */}
-                <div style={{
-                    position: 'absolute',
-                    top: '12%',
-                    left: '12%',
-                    width: '80px',
-                    height: '80px',
-                    borderRadius: '50%',
-                    background: `linear-gradient(135deg, ${colors.pink}40 0%, ${colors.pinkDark}20 100%)`,
-                    backdropFilter: 'blur(20px)',
-                    border: '1px solid rgba(212, 180, 176, 0.2)',
-                    boxShadow: `0 20px 40px ${colors.pink}20, inset 0 1px 0 rgba(255,255,255,0.2)`,
-                    transform: `translate(${mousePos.x * 0.02}px, ${mousePos.y * 0.02}px)`,
-                    transition: 'transform 0.4s ease-out',
-                    animation: 'float 6s ease-in-out infinite'
-                }} />
-
-                {/* Silver glass orb */}
-                <div style={{
-                    position: 'absolute',
-                    bottom: '20%',
-                    right: '15%',
-                    width: '48px',
-                    height: '48px',
-                    borderRadius: '50%',
-                    background: `linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(192,192,192,0.1) 100%)`,
-                    backdropFilter: 'blur(15px)',
-                    border: '1px solid rgba(255, 255, 255, 0.15)',
-                    boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.3)',
-                    transform: `translate(${mousePos.x * -0.015}px, ${mousePos.y * 0.015}px)`,
-                    transition: 'transform 0.4s ease-out',
-                    animation: 'float 5s ease-in-out infinite 1s'
-                }} />
 
                 {/* Olive accent tag */}
                 <div style={{
                     position: 'absolute',
-                    bottom: '38%',
-                    left: '18%',
+                    bottom: '5%',
+                    right: '25%',
                     padding: '10px 20px',
                     background: `linear-gradient(135deg, ${colors.olive} 0%, ${colors.oliveMuted} 100%)`,
                     borderRadius: '100px',
